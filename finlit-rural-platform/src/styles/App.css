@@ -1,0 +1,386 @@
+/* ==========================================================================
+   NoteKaka Design System & HCI Tokens
+   Rural Financial Literacy Platform
+   Warm, reassuring, accessible, and inclusive styling
+   ========================================================================== */
+
+:root {
+  /* Warm Rural Palette */
+  --color-bg: #FAF7F2;
+  --color-surface: #FFFFFF;
+  --color-surface-subtle: #F4EFEB;
+  --color-surface-hover: #EFE8E0;
+  
+  /* Primary: Deep Forest & Leaf Green */
+  --color-primary: #1E4D2B;
+  --color-primary-hover: #163B20;
+  --color-primary-light: #2D6A4F;
+  --color-primary-soft: #EAF2EC;
+  
+  /* Muted Sage */
+  --color-sage: #6B8E68;
+  --color-sage-light: #E3EDE4;
+  --color-sage-border: #C2D5C4;
+
+  /* Terracotta / Earthen Clay */
+  --color-terracotta: #C05C38;
+  --color-terracotta-hover: #A04828;
+  --color-terracotta-soft: #FDF3EF;
+  
+  /* Sunlight Ochre & Gold */
+  --color-gold: #D97706;
+  --color-gold-hover: #B45309;
+  --color-gold-soft: #FFF9EB;
+
+  /* Text & Ink */
+  --color-text-primary: #1C2B1E;
+  --color-text-secondary: #4A5B4D;
+  --color-text-muted: #6E7E71;
+  --color-border: #DFD7CC;
+  --color-border-subtle: #EDE7DE;
+
+  /* Feedback Colors */
+  --color-success: #1B7A42;
+  --color-success-bg: #E8F5EE;
+  --color-warning: #B45309;
+  --color-warning-bg: #FFFBEB;
+  --color-danger: #B91C1C;
+  --color-danger-bg: #FEF2F2;
+  --color-info: #1D6F8A;
+  --color-info-bg: #F0F8FB;
+
+  /* Spacing & Radii */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-pill: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 6px rgba(28, 43, 30, 0.05);
+  --shadow-md: 0 4px 16px rgba(28, 43, 30, 0.08);
+  --shadow-lg: 0 8px 24px rgba(28, 43, 30, 0.12);
+
+  /* Typography */
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-size-base: 16px;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.35rem;
+  --font-size-2xl: 1.75rem;
+  --font-size-3xl: 2.25rem;
+
+  --line-height: 1.65;
+  --min-touch-target: 48px;
+}
+
+/* Accessible High Contrast Theme */
+[data-theme="high-contrast"] {
+  --color-bg: #0C0F0D;
+  --color-surface: #18221A;
+  --color-surface-subtle: #222F25;
+  --color-surface-hover: #2C3C30;
+  
+  --color-primary: #8CE89E;
+  --color-primary-hover: #AAFFAF;
+  --color-primary-light: #52C36D;
+  --color-primary-soft: #1E3823;
+  
+  --color-sage: #B4D7B2;
+  --color-sage-light: #203522;
+  --color-sage-border: #4D7450;
+
+  --color-terracotta: #FF9B70;
+  --color-terracotta-hover: #FFB391;
+  --color-terracotta-soft: #381B12;
+
+  --color-gold: #FFD166;
+  --color-gold-hover: #FFE08F;
+  --color-gold-soft: #382D08;
+
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #E3EDE4;
+  --color-text-muted: #BED0C0;
+  --color-border: #4D6450;
+  --color-border-subtle: #334435;
+
+  --shadow-sm: 0 0 0 1px #4D6450;
+  --shadow-md: 0 0 0 2px #4D6450;
+  --shadow-lg: 0 0 0 3px #8CE89E;
+}
+
+/* Large Font Scale Mode */
+[data-font-size="large"] {
+  --font-size-base: 18.5px;
+  --font-size-sm: 1rem;
+  --font-size-md: 1.125rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.55rem;
+  --font-size-2xl: 2rem;
+  --font-size-3xl: 2.6rem;
+}
+
+/* Reduced Motion Preference */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* CSS Reset & Base Rules */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: var(--font-size-base);
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  line-height: var(--line-height);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  padding: 24px 20px 48px;
+  max-width: 1180px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Keyboard Accessible Focus Rings */
+:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--color-gold);
+  outline-offset: 2px;
+}
+
+/* Reusable Button Styles */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: var(--min-touch-target);
+  padding: 12px 24px;
+  border: 2px solid transparent;
+  border-radius: var(--radius-pill);
+  font-family: inherit;
+  font-size: var(--font-size-md);
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+  user-select: none;
+}
+
+.button:active {
+  transform: scale(0.98);
+}
+
+.button-primary {
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+}
+
+.button-primary:hover {
+  background-color: var(--color-primary-hover);
+  box-shadow: var(--shadow-md);
+}
+
+.button-secondary {
+  background-color: var(--color-terracotta);
+  color: #FFFFFF;
+}
+
+.button-secondary:hover {
+  background-color: var(--color-terracotta-hover);
+  box-shadow: var(--shadow-md);
+}
+
+.button-outline {
+  background-color: var(--color-surface);
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+.button-outline:hover {
+  background-color: var(--color-primary-soft);
+  color: var(--color-primary-hover);
+}
+
+.button-soft {
+  background-color: var(--color-primary-soft);
+  color: var(--color-primary);
+  border: 1px solid var(--color-sage-border);
+}
+
+.button-soft:hover {
+  background-color: var(--color-sage-light);
+}
+
+.button-small {
+  min-height: 38px;
+  padding: 8px 16px;
+  font-size: var(--font-size-sm);
+}
+
+.button-large {
+  min-height: 56px;
+  padding: 16px 32px;
+  font-size: var(--font-size-lg);
+  font-weight: 700;
+}
+
+.button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Card Component Base */
+.card {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  border-color: var(--color-sage-border);
+}
+
+/* Educational Sandbox & Safety Notice Banner */
+.simulation-watermark-banner {
+  background-color: var(--color-gold-soft);
+  border: 1.5px dashed var(--color-gold);
+  border-radius: var(--radius-md);
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--color-text-primary);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  margin-bottom: 24px;
+}
+
+.simulation-watermark-banner .banner-icon {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+
+/* Accessibility Toolbar in Header */
+.a11y-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.a11y-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 38px;
+  padding: 6px 12px;
+  background-color: var(--color-surface-subtle);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.a11y-btn:hover {
+  background-color: var(--color-surface-hover);
+  border-color: var(--color-primary);
+}
+
+.a11y-btn.active {
+  background-color: var(--color-primary-soft);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+/* Skip to Content for Accessibility */
+.skip-link {
+  position: absolute;
+  top: -60px;
+  left: 16px;
+  background: var(--color-gold);
+  color: #111;
+  padding: 12px 20px;
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+  z-index: 9999;
+  transition: top 0.2s ease;
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  top: 16px;
+}
+
+/* Responsive Grid Helpers */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 900px) {
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .grid-2,
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+  .main-content {
+    padding: 16px 14px 40px;
+  }
+}

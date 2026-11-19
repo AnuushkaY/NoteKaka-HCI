@@ -1,0 +1,595 @@
+/* ==========================================================================
+   Digital Payments & UPI Simulator Styles
+   ========================================================================== */
+
+.digital-payments-page {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.payments-hero-card {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.payments-hero-card h1 {
+  font-size: var(--font-size-2xl);
+  color: var(--color-primary);
+}
+
+.payments-hero-card .subtitle {
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  margin-top: 4px;
+}
+
+/* Tabs Row */
+.payments-tabs-row {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.tab-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 8px 18px;
+  background-color: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+.tab-pill-btn:hover {
+  border-color: var(--color-primary);
+}
+
+.tab-pill-btn.active {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #FFFFFF;
+}
+
+/* Scenarios Grid */
+.simulator-scenario-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.scenarios-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.scenario-item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  cursor: pointer;
+  border: 2px solid var(--color-border);
+  transition: all 0.2s ease;
+}
+
+.scenario-item:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.scenario-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.scenario-icon {
+  font-size: 2.2rem;
+}
+
+.scenario-amount {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  background-color: var(--color-primary-soft);
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+}
+
+.scenario-item h3 {
+  font-size: 1.15rem;
+  color: var(--color-primary);
+}
+
+.scenario-desc {
+  font-size: 0.88rem;
+  color: var(--color-text-secondary);
+  line-height: 1.4;
+  flex: 1;
+}
+
+.scenario-id-preview {
+  background-color: var(--color-surface-subtle);
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+/* Custom Practice Form */
+.custom-practice-box {
+  background-color: var(--color-surface-subtle);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.custom-practice-box h3 {
+  font-size: 1.05rem;
+  color: var(--color-text-primary);
+}
+
+.custom-fields-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.custom-input {
+  flex: 1;
+  min-width: 220px;
+  min-height: 48px;
+  padding: 10px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  font-family: inherit;
+  font-size: 0.95rem;
+  background-color: var(--color-surface);
+  color: var(--color-text-primary);
+}
+
+.custom-input.amount {
+  flex: 0.4;
+  min-width: 120px;
+}
+
+/* Simulator Phone Frame */
+.simulator-phone-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+
+.mock-phone-frame {
+  width: 100%;
+  max-width: 440px;
+  background-color: var(--color-surface);
+  border: 3px solid var(--color-primary);
+  border-radius: 36px;
+  padding: 24px 20px;
+  box-shadow: 0 12px 36px rgba(30, 77, 43, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.phone-top-status {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  border-bottom: 1px solid var(--color-border-subtle);
+  padding-bottom: 8px;
+}
+
+/* Verification Screen Body */
+.verification-screen-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 14px;
+}
+
+.verification-avatar {
+  font-size: 3rem;
+  width: 72px;
+  height: 72px;
+  background-color: var(--color-primary-soft);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.paying-to-label {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.recipient-name-highlight {
+  font-size: 1.45rem;
+  color: var(--color-primary);
+  line-height: 1.2;
+}
+
+.recipient-id-badge {
+  background-color: var(--color-surface-subtle);
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+}
+
+.verification-guidance-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background-color: var(--color-gold-soft);
+  border: 1px solid var(--color-gold);
+  border-radius: var(--radius-md);
+  padding: 12px;
+  text-align: left;
+  font-size: 0.85rem;
+  color: var(--color-text-primary);
+}
+
+.amount-confirm-box {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 4px;
+  margin: 10px 0;
+}
+
+.amount-confirm-box .currency-symbol {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--color-primary);
+}
+
+.amount-confirm-box .amount-number {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  line-height: 1;
+}
+
+.verification-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+/* PIN Screen Body */
+.pin-screen-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 14px;
+}
+
+.pin-payment-meta {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: var(--color-surface-subtle);
+  padding: 8px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+}
+
+.pin-meta-amount {
+  color: var(--color-primary);
+}
+
+.pin-title {
+  font-size: 1.2rem;
+  color: var(--color-text-primary);
+}
+
+.pin-warning-callout {
+  display: flex;
+  gap: 8px;
+  background-color: var(--color-danger-bg);
+  border: 1px solid var(--color-danger);
+  border-radius: var(--radius-md);
+  padding: 10px 12px;
+  font-size: 0.8rem;
+  color: var(--color-danger);
+  text-align: left;
+}
+
+.pin-dots-container {
+  display: flex;
+  gap: 18px;
+  margin: 12px 0;
+}
+
+.pin-dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid var(--color-primary);
+  background-color: transparent;
+  transition: all 0.2s ease;
+}
+
+.pin-dot.filled {
+  background-color: var(--color-primary);
+  transform: scale(1.15);
+}
+
+.pin-error-text {
+  color: var(--color-danger);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* Numeric Keypad */
+.numeric-keypad-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.keypad-btn {
+  min-height: 54px;
+  background-color: var(--color-surface-subtle);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-family: inherit;
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+}
+
+.keypad-btn:active {
+  background-color: var(--color-primary-soft);
+  transform: scale(0.95);
+}
+
+.keypad-btn.action-key {
+  font-size: 1.15rem;
+}
+
+.keypad-btn.submit-key {
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+  border-color: var(--color-primary);
+}
+
+/* Success Confirmation Screen */
+.success-screen-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 14px;
+}
+
+.success-checkmark-circle {
+  width: 68px;
+  height: 68px;
+  background-color: var(--color-success);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  font-weight: 800;
+  box-shadow: 0 4px 14px rgba(27, 122, 66, 0.3);
+}
+
+.success-screen-body h2 {
+  font-size: 1.4rem;
+  color: var(--color-success);
+}
+
+.success-amount-display {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--color-primary);
+}
+
+.success-recipient-line {
+  font-size: 0.95rem;
+  color: var(--color-text-primary);
+}
+
+.fictional-txn-box {
+  width: 100%;
+  background-color: var(--color-surface-subtle);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  font-size: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.txn-row {
+  display: flex;
+  justify-content: space-between;
+  color: var(--color-text-secondary);
+}
+
+.simulation-stamp-watermark {
+  border: 1.5px dashed var(--color-gold);
+  background-color: var(--color-gold-soft);
+  color: var(--color-gold-hover);
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.success-takeaway-card {
+  background-color: var(--color-primary-soft);
+  border-radius: var(--radius-md);
+  padding: 12px 16px;
+  text-align: left;
+  font-size: 0.85rem;
+  color: var(--color-text-primary);
+  width: 100%;
+}
+
+.success-takeaway-card h4 {
+  color: var(--color-primary);
+  margin-bottom: 6px;
+}
+
+.success-takeaway-card ul {
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* Scam Buster Rules */
+.scambuster-tab-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.scam-rules-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.scam-rule-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.scam-rule-card.do-not {
+  border-left: 5px solid var(--color-danger);
+}
+
+.scam-rule-card.do {
+  border-left: 5px solid var(--color-success);
+}
+
+.rule-badge {
+  font-size: 0.8rem;
+  font-weight: 700;
+  align-self: flex-start;
+}
+
+.scam-rule-card h3 {
+  font-size: 1.15rem;
+  color: var(--color-text-primary);
+}
+
+.scam-rule-card p {
+  font-size: 0.92rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+/* QR Guide */
+.qrguide-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.qr-explanation-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.qr-step-box {
+  background-color: var(--color-surface-subtle);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 16px;
+}
+
+.qr-step-box .step-num {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  display: block;
+  margin-bottom: 6px;
+}
+
+.qr-step-box h4 {
+  font-size: 1rem;
+  color: var(--color-text-primary);
+  margin-bottom: 4px;
+}
+
+.qr-step-box p {
+  font-size: 0.88rem;
+  color: var(--color-text-secondary);
+}
+
+.live-qr-demo-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  background-color: var(--color-surface-subtle);
+  border-radius: var(--radius-lg);
+  padding: 24px;
+}
+
+.demo-qr-center {
+  background: white;
+  padding: 16px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.qr-caption {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .scenarios-grid,
+  .scam-rules-grid,
+  .qr-explanation-grid {
+    grid-template-columns: 1fr;
+  }
+}

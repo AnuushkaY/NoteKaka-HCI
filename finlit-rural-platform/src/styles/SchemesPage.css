@@ -1,0 +1,112 @@
+/* ==========================================================================
+   Government Schemes Directory Styles
+   ========================================================================== */
+
+.schemes-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.schemes-hero-card {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.schemes-hero-text h1 {
+  font-size: var(--font-size-2xl);
+  color: var(--color-primary);
+}
+
+.schemes-hero-text .subtitle {
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  margin-top: 4px;
+}
+
+.schemes-filters-box {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px;
+}
+
+.schemes-search-field {
+  width: 100%;
+  min-height: 50px;
+  padding: 12px 20px;
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  font-family: inherit;
+  font-size: 1rem;
+  background-color: var(--color-surface);
+  color: var(--color-text-primary);
+}
+
+.schemes-search-field:focus {
+  border-color: var(--color-primary);
+}
+
+.categories-pill-list {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+}
+
+.cat-pill-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 6px 16px;
+  background-color: var(--color-surface-subtle);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  font-family: inherit;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.cat-pill-button:hover {
+  background-color: var(--color-surface-hover);
+  border-color: var(--color-primary);
+}
+
+.cat-pill-button.active {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #FFFFFF;
+}
+
+.schemes-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.no-schemes-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 14px;
+  padding: 36px 20px;
+}
+
+.no-result-icon {
+  font-size: 2.5rem;
+}
+
+@media (max-width: 860px) {
+  .schemes-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
